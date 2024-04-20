@@ -1,20 +1,11 @@
-import React, { useState } from 'react'
-import './homeStyles.css'
-import { WebcamCapture} from '../Webcam/Webcam'
-
+import React from 'react';
+import './homeStyles.css';
+import WebcamCapture from 'react-webcam';
 
 const Home = () => {
-
-    const [name, setName] = useState('')
-    const [email, setEmail] = useState('');
-
-
     const submitForm = () => {
         alert("Form submitted");
-        setName('');
-        setEmail('');
     }
-
 
     return (
         <div className="home-container">
@@ -22,13 +13,13 @@ const Home = () => {
                 <div className="text">
                     <h1>Capture the Image</h1>
                     <form className="form">
-                        <WebcamCapture/>
-                        
+                        <WebcamCapture />
                         <button type="submit" id="login-button" onClick={(e) => submitForm(e)}>Submit</button>
                     </form>
                 </div>
             </div>
         </div>
-    )
+    );
 }
-export default Home
+
+export default Home;
